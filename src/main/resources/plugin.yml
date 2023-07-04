@@ -1,0 +1,9 @@
+name: CostomItem
+version: '1.0.0'
+main: xiao_student.costomitem.CostomItem
+api-version: 1.15
+commands:
+  costomitem:
+    description: "get help"
+    permission: "op"
+    permission-message: "you don't have permisssion"

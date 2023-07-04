@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CostomItem">
+    <output-path>$PROJECT_DIR$/../../../我的世界/我的世界服务器端/testPluginServer/plugins</output-path>
+    <root id="archive" name="CostomItem.jar">
+      <element id="module-output" name="CostomItem.main" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
