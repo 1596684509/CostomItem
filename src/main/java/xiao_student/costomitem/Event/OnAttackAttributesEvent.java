@@ -1,15 +1,13 @@
-package xiao_student.costomitem;
+package xiao_student.costomitem.Event;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import xiao_student.costomitem.Sword.ItemEnum;
+import xiao_student.costomitem.Item.ItemEnum;
 
 import java.util.Random;
 
@@ -87,7 +85,11 @@ public class OnAttackAttributesEvent implements Listener {
 
         }
 
-        player.sendMessage(ChatColor.YELLOW + "攻击回复： " + heal + "血");
+        if(heal > 0) {
+
+            player.sendMessage(ChatColor.YELLOW + "攻击回复： " + heal + "血");
+
+        }
 
     }
 

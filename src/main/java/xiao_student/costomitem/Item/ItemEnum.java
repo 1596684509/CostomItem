@@ -1,16 +1,18 @@
-package xiao_student.costomitem.Sword;
+package xiao_student.costomitem.Item;
 
 import org.bukkit.NamespacedKey;
-import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import xiao_student.costomitem.CostomItem;
+import xiao_student.costomitem.Item.Helmet.LieHuoCunHu;
+import xiao_student.costomitem.Item.Sword.Lieyan;
 
 public enum ItemEnum {
 
     lieyan(new Lieyan(), "lieyan", 0, new NamespacedKey(CostomItem.getCostomItem(), "coustomItem")),
+    liehuocunhuT(new LieHuoCunHu(), "liehuocunhuT", 1, new NamespacedKey(CostomItem.getCostomItem(), "coustomItem"))
 
     ;
      private final ItemInterface itemStack;

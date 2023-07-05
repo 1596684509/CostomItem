@@ -2,6 +2,8 @@ package xiao_student.costomitem;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import xiao_student.costomitem.Event.OnAttackAttributesEvent;
+import xiao_student.costomitem.Event.OnRightClickEvent;
 
 import java.util.Objects;
 

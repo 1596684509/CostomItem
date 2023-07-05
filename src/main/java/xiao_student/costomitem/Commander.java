@@ -6,7 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import xiao_student.costomitem.Sword.ItemEnum;
+import xiao_student.costomitem.Item.ItemEnum;
 
 public class Commander implements CommandExecutor {
 

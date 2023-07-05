@@ -1,4 +1,4 @@
-package xiao_student.costomitem.Sword;
+package xiao_student.costomitem.Item;
 
 
 import org.bukkit.inventory.ItemStack;

@@ -1,26 +1,24 @@
-package xiao_student.costomitem.Sword;
+package xiao_student.costomitem.Item.Sword;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
+import xiao_student.costomitem.Item.ItemSuperClass;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Lieyan extends ItemSuperClass{
+public class Lieyan extends ItemSuperClass {
 
     public Lieyan() {
 
         itemStack = new ItemStack(Material.GOLDEN_SWORD);
         setItemMeta();
-        itemStack.setItemMeta(itemMeta);
 
     }
 
@@ -38,6 +36,7 @@ public class Lieyan extends ItemSuperClass{
         itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         itemMeta.setUnbreakable(true);
+        itemStack.setItemMeta(itemMeta);
 
     }
 
