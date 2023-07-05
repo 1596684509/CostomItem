@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class LieHuoCunHu extends ItemSuperClass {
+public class LieHuoCunHuT extends ItemSuperClass {
 
-    public LieHuoCunHu() {
+    public LieHuoCunHuT() {
 
         itemStack = new ItemStack(Material.GOLDEN_HELMET);
         itemMeta = itemStack.getItemMeta();
@@ -31,8 +31,8 @@ public class LieHuoCunHu extends ItemSuperClass {
 
         itemMeta.setDisplayName(ChatColor.RED + "烈火村护-头盔");
         itemMeta.setLore(setLore());
-        itemMeta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH ,setModifier(149, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD));
-        itemMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, setModifier(9, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD));
+        itemMeta.addAttributeModifier(Attribute.GENERIC_MAX_HEALTH ,setModifier(150, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD));
+        itemMeta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, setModifier(10, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HEAD));
         itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         itemMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         itemMeta.setUnbreakable(true);
@@ -60,6 +60,7 @@ public class LieHuoCunHu extends ItemSuperClass {
         lore.add(ChatColor.GRAY + "暴击伤害: "+ critDamage +"%");
         lore.add(ChatColor.YELLOW + "===============-[介绍]-===============");
         lore.add(ChatColor.YELLOW + "===============-[套装]-===============");
+        lore.add(ChatColor.GRAY + "===> 绝剑-[烈焰]");
         lore.add(ChatColor.GRAY + "===> 烈火村护-头盔");
         lore.add(ChatColor.GRAY + "===> 烈火村护-护甲");
         lore.add(ChatColor.GRAY + "===> 烈火村护-护腿");

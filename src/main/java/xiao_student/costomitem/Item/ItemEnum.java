@@ -6,13 +6,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import xiao_student.costomitem.CostomItem;
-import xiao_student.costomitem.Item.Helmet.LieHuoCunHu;
+import xiao_student.costomitem.Item.Helmet.LieHuoCunHuT;
 import xiao_student.costomitem.Item.Sword.Lieyan;
 
 public enum ItemEnum {
 
     lieyan(new Lieyan(), "lieyan", 0, new NamespacedKey(CostomItem.getCostomItem(), "coustomItem")),
-    liehuocunhuT(new LieHuoCunHu(), "liehuocunhuT", 1, new NamespacedKey(CostomItem.getCostomItem(), "coustomItem"))
+    liehuocunhuT(new LieHuoCunHuT(), "liehuocunhuT", 1, new NamespacedKey(CostomItem.getCostomItem(), "coustomItem"))
 
     ;
      private final ItemInterface itemStack;
