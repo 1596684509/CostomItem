@@ -177,4 +177,27 @@ public enum ItemEnum {
 
     }
 
+    public static String getTag(ItemStack itemStack) {
+
+        if(itemStack == null) {
+
+            return null;
+
+        }
+
+        ItemMeta itemMeta = itemStack.getItemMeta();
+        PersistentDataContainer pd = itemMeta.getPersistentDataContainer();
+        for (ItemEnum value : values()) {
+
+            if(value.tag.equals(pd.get(value.namespacedKey, PersistentDataType.STRING))) {
+
+                return value.tag;
+
+            }
+
+        }
+
+        return null;
+
+    }
 }

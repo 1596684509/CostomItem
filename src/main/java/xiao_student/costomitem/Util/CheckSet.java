@@ -1,10 +1,13 @@
 package xiao_student.costomitem.Util;
 
 import org.bukkit.ChatColor;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.persistence.PersistentDataContainer;
+import org.bukkit.persistence.PersistentDataType;
 import xiao_student.costomitem.Item.ItemEnum;
 import xiao_student.costomitem.Item.ItemInterface;
 
@@ -24,30 +27,29 @@ public class CheckSet {
 
     private boolean isSet = false;
 
-    public CheckSet(Player player, ItemInterface itemInOffHand, ItemInterface itemInMainHand, ItemInterface itemInHead, ItemInterface itemInBody, ItemInterface itemInRetreat, ItemInterface itemInFoot) {
-        this.player = player;
-        this.itemInOffHand = itemInOffHand;
-        this.itemInMainHand = itemInMainHand;
-        this.itemInHead = itemInHead;
-        this.itemInBody = itemInBody;
-        this.itemInRetreat = itemInRetreat;
-        this.itemInFoot = itemInFoot;
-    }
-
-    public CheckSet(Player player, ItemInterface itemInMainHand, ItemInterface itemInHead) {
+    public CheckSet(Player player, ItemEnum itemInHand, ItemEnum itemInHead) {
 
         ItemStack mainHand = player.getInventory().getItemInMainHand();
         ItemStack head = player.getInventory().getItem(EquipmentSlot.HEAD);
-        player.sendMessage("你关闭了背包");
 
-        if(mainHand == itemInMainHand.getItemStack()) {
+        if(mainHand == null || head == null) {
 
-            ItemMeta itemMeta = mainHand.getItemMeta();
+            return;
+
+        }
+
+        ItemMeta itemMeta = head.getItemMeta();
+        player.sendMessage("你点击了背包");
+
+        if(ItemEnum.getTag(itemInHead.getItemInterface().getItemStack()).equals(ItemEnum.getTag(head))) {
+
+            player.sendMessage("这是个套装");
+
             List lore = itemMeta.getLore();
             lore.set(9, ChatColor.GOLD + "===> 绝剑-[烈焰]");
             lore.set(10, ChatColor.GOLD + "===> 烈火村护-头盔");
             itemMeta.setLore(lore);
-            mainHand.setItemMeta(itemMeta);
+            head.setItemMeta(itemMeta);
 
         }
 
