@@ -1,31 +1,55 @@
 package xiao_student.costomitem.Util;
 
 import org.bukkit.ChatColor;
-import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
-import org.bukkit.persistence.PersistentDataType;
 import xiao_student.costomitem.Item.ItemEnum;
-import xiao_student.costomitem.Item.ItemInterface;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CheckSet {
 
     private Player player;
-    private ItemInterface itemInOffHand;
-    private ItemInterface itemInMainHand;
-    private ItemInterface itemInHead;
+    private ItemStack mainHand;
+    private ItemStack offHand;
+    private ItemStack head;
+    private ItemStack chest;
+    private ItemStack leg;
+    private ItemStack foot;
 
-    private ItemInterface itemInBody;
-    private ItemInterface itemInRetreat;
-    private ItemInterface itemInFoot;
+    public CheckSet(Player player) {
 
-    private boolean isSet = false;
+        this.player = player;
+
+    }
+
+
+    public boolean itemEquals(ItemStack item1, ItemStack item2) {
+
+        ItemMeta item1Meta;
+        ItemMeta item2Meta;
+        String item1tag = null;
+        String item2tag = null;
+
+        if(item1 != null && item2 != null) {
+
+            item1tag = ItemEnum.getTag(item1);
+            item2tag = ItemEnum.getTag(item2);
+
+            if(item1tag.equals(item2tag)) {
+
+                return true;
+
+            }
+
+        }
+
+        return false;
+
+    }
 
     public CheckSet(Player player, ItemEnum itemInHand, ItemEnum itemInHead) {
 
